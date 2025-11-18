@@ -67,13 +67,14 @@ router.post("/leads", async (req, res) => {
 
     // 📧 Setup Nodemailer transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.MY_EMAIL,
-        pass: process.env.MY_APP_PASSWORD,
+       host: "smtp.gmail.com",
+       port: 465,
+       secure: true, // MUST be true for port 465
+       auth: {
+       user: process.env.EMAIL_USER,
+       pass: process.env.EMAIL_PASS,
       },
-    });
-
+      });
     // ✉️ Compose email message
     const mailOptions = {
       from: process.env.MY_EMAIL,
