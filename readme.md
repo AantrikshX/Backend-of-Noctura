@@ -56,14 +56,16 @@ Designed to be fast, simple, and production-ready.
 ## 🗂️ **Project Structure**
 
 ```
-/noctura-backend
-│── /models
-│── /routes
-│── /controllers
-│── /config
-│── server.js
+Backend-of-Noctura/
+│── models/              # Mongoose models
+│── node_modules/        # Dependencies
+│── api.js               # API routes
+│── app.js               # Main server entry
 │── package.json
-│── .env
+│── package-lock.json
+│── README.md
+│── .env                 # Environment variables (not committed)
+
 ```
 
 ---
@@ -73,9 +75,10 @@ Designed to be fast, simple, and production-ready.
 Create a `.env` file:
 
 ```
-MONGO_URI=your_mongo_connection_string
-EMAIL_USER=your_gmail_address
-EMAIL_PASS=your_email_app_password
+MY_EMAIL = your_gmail_address
+RECIEVER_EMAIL = reciever_gmail_address
+MY_APP_PASSWORD =your_email_app_password
+MONGODB_URI = your_mongo_connection_string
 ```
 
 ---
@@ -128,9 +131,10 @@ npm start
 ```
 
 ### Add Environment Variables
-- `MONGO_URI`
-- `EMAIL_USER`
-- `EMAIL_PASS`
+- `MY_EMAIL`
+- `RECIEVER_EMAIL`
+- `MY_APP_PASSWORD`
+- `MONGODB_URI `
 
 ---
 
